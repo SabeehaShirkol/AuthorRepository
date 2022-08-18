@@ -13,26 +13,27 @@ public class Author {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer id;
-	private String image;
+	private String logo;
 	private String title;
 	private String category;
-	private Integer price;
+	private double price;
 	private String authorName;
 	private String publisherName;
 	private Date publishedDate;
 	private Integer chapters;
 	private String active;
+	
 	public Integer getId() {
 		return id;
 	}
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public String getImage() {
-		return image;
+	public String getLogo() {
+		return logo;
 	}
-	public void setImage(String image) {
-		this.image = image;
+	public void setLogo(String logo) {
+		this.logo = logo;
 	}
 	public String getTitle() {
 		return title;
@@ -46,10 +47,10 @@ public class Author {
 	public void setCategory(String category) {
 		this.category = category;
 	}
-	public Integer getPrice() {
+	public double getPrice() {
 		return price;
 	}
-	public void setPrice(Integer price) {
+	public void setPrice(double price) {
 		this.price = price;
 	}
 	public String getAuthorName() {
@@ -82,11 +83,11 @@ public class Author {
 	public void setActive(String active) {
 		this.active = active;
 	}
-	public Author(Integer id, String image, String title, String category, Integer price, String authorName,
+	public Author(Integer id, String logo, String title, String category, double price, String authorName,
 			String publisherName, Date publishedDate, Integer chapters, String active) {
 		super();
 		this.id = id;
-		this.image = image;
+		this.logo = logo;
 		this.title = title;
 		this.category = category;
 		this.price = price;
